@@ -8,10 +8,16 @@
 <body ng-app="FMCDashboard">
 <div id="table">
 <div class="col">
-	<div class="header"> <img src="images/logo1.png" /> </div>
+	<div class="header">
+		<div class="tableItem">
+			<div> </div>
+			<div><img src="images/logo1.png" style="margin-top: -6px;"/> </div>
+			<div><span>SPS CAPEX</span></div>
+		</div>
+	</div>
 	<div ng-repeat="item in table1">
 		<div class="tableItem">
-			<div> {{item.name}} <br>
+			<div style="text-align: left;"> {{item.name}} <br>
 				{{item.subname}} </div>
 			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span> <img ng-src="{{item.image}}" /> </div>
 			<div>
@@ -28,10 +34,16 @@
 	</div>
 </div>
 <div class="col">
-	<div class="header"> <img src="images/logo2.png" /> </div>
+	<div class="header">
+		<div class="tableItem">
+			<div> </div>
+			<div><img src="images/logo2.png" style="margin-top: 11px;"/> </div>
+			<div> <span>SURF CAPEX</span> </div>
+		</div>
+	</div>
 	<div ng-repeat="item in table2">
 		<div class="tableItem">
-			<div> {{item.name}} <br>
+			<div style="text-align: left;"> {{item.name}} <br>
 				{{item.subname}} </div>
 			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span> <img ng-src="{{item.image}}" /> </div>
 			<div>
