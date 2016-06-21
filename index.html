@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<title>FMC Dashboard</title>
+<meta charset="utf-8">
+<link href="app.css" type="text/css" rel="stylesheet">
+</head>
+<body ng-app="FMCDashboard">
+<div id="table">
+<div class="col">
+	<div class="header"> <img src="images/logo1.png" /> </div>
+	<div ng-repeat="item in table1">
+		<div class="tableItem">
+			<div> {{item.name}} <br>
+				{{item.subname}} </div>
+			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span> <img ng-src="{{item.image}}" /> </div>
+			<div>
+				<div class="text-blue">Non-Integated</div>
+				<div class="progressbar">
+					<div class="percent-blue" ng-style="{'width': item.nonIntegrated[currentState] + '%'}"></div>
+				</div>
+				<div class="progressbar">
+					<div class="percent-green" ng-style="{'width': item.integrated[currentState] + '%'}"></div>
+				</div>
+				<div class="text-green">Integrated</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col">
+	<div class="header"> <img src="images/logo2.png" /> </div>
+	<div ng-repeat="item in table2">
+		<div class="tableItem">
+			<div> {{item.name}} <br>
+				{{item.subname}} </div>
+			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span> <img ng-src="{{item.image}}" /> </div>
+			<div>
+				<div class="text-blue">Non-Integated</div>
+				<div class="progressbar">
+					<div class="percent-blue" ng-style="{'width': item.nonIntegrated[currentState] + '%'}"></div>
+				</div>
+				<div class="progressbar">
+					<div class="percent-green" ng-style="{'width': item.integrated[currentState] + '%'}"></div>
+				</div>
+				<div class="text-green">Integrated</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="cart">
+	<div class="total-saving" ng-style="{'width': graphState + '%'}"> <img ng-class="{'cart-slide-left': currentState == maxState}" src="images/graphTotalSaving.png" /> </div>
+	<div class="total-saving-text" ng-class="{'text-slide-left': currentState == maxState}" ng-style="graphState > 20 ? {'opacity': '1.0', 'left': graphState + 2 + '%'} : {'opacity': '0', 'left': graphState + 2 + '%'}">${{counterSaving}}M<br>
+		Total Saving</div>
+	<img src="images/graphBg.png" /> </div>
+<script src="js/angular.js"></script> 
+<script src="js/data.js"></script> 
+<script src="js/app.js"></script>
+</body>
+</html>
