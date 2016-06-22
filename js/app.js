@@ -71,5 +71,10 @@ angular.module('FMCDashboard', []).
 				if(!itm.highLight) {return false;}
 				return itm.highLight.indexOf($scope.currentState) != -1;
 			}
+			
+			$scope.desaturate = function (itm) {
+				if(!itm.desaturate) {return false;}								
+				return itm.desaturate.indexOf($scope.currentState) != -1;
+			}
 
         }]);
