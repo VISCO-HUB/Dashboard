@@ -6,7 +6,7 @@
          nonIntegrated: { 1: 91, 2: 91, 3: 91, 4: 91, 5: 91, 6: 91, 7: 91, 8: 91, 9: 91, 10: 91 },
          integrated: { 1: 0, 2: 50, 3: 50, 4: 50, 5: 50, 6: 50, 7: 60, 8: 60, 9: 60, 10: 60 }	,
 		 highLight: [],
-		 desaturate: [2,8]		 
+		 desaturate: [2, 3, 4, 5]		 
      },
      {
          name: "Manifold / Plet",
@@ -14,7 +14,7 @@
          nonIntegrated: { 1: 30, 2: 30, 3: 30, 4: 30, 5: 30, 6: 30, 7: 30, 8: 30, 9: 30, 10: 30 },
          integrated: { 1: 0, 2: 0, 3: 35, 4: 45, 5: 45, 6: 45, 7: 45, 8: 45, 9: 55, 10: 55 },
          highLight: [],	
-		 desaturate: [3, 9]	
+		 desaturate: [3, 4, 5]	
      },	
      {
          name: "Controls",
@@ -22,7 +22,7 @@
          nonIntegrated: {1: 34, 2: 34, 3: 34, 4: 34, 5: 34, 6: 34, 7: 34, 8: 34, 9: 34, 10: 34},
          integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 },
 		 highLight: [],
-		 desaturate: [4]
+		 desaturate: [4, 5]
      },  
      {
          name: "TIE-IN SYSTEMS",
