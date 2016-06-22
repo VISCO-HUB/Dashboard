@@ -42,7 +42,7 @@ var table2 = [
          nonIntegrated: { 1: 83, 2: 83, 3: 83, 4: 83, 5: 83, 6: 83, 7: 83, 8: 83, 9: 83, 10: 83 },
          integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 28, 7: 38, 8: 38, 9: 38, 10: 38 },
 		 highLight: [],
-		 desaturate: [6, 7]		
+		 desaturate: [6, 7, 8, 9]		
      },
 	  {
          name: "Heavy Lift",
@@ -51,7 +51,7 @@ var table2 = [
          nonIntegrated: {1: 79, 2: 79, 3: 79, 4: 79, 5: 79, 6: 79, 7: 79, 8: 79, 9: 79, 10: 79},
          integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 43, 8: 43, 9: 43, 10: 43 },
 		 highLight: [],
-		 desaturate: [7]	
+		 desaturate: [7, 8, 9]	
      },
 	  {
          name: "Construction",
@@ -60,7 +60,7 @@ var table2 = [
          nonIntegrated: {1: 86, 2: 86, 3: 86, 4: 86, 5: 86, 6: 86, 7: 86, 8: 86, 9: 86, 10: 86},
          integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 45, 9: 45, 10: 45 },
      	 highLight: [],
-		 desaturate: [8]	
+		 desaturate: [8, 9]	
      },
 	 {
          name: "Umbilical",
@@ -69,7 +69,7 @@ var table2 = [
          nonIntegrated: {1: 58, 2: 58, 3: 58, 4: 58, 5: 58, 6: 58, 7: 58, 8: 58, 9: 58, 10: 58},
          integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 35, 10: 35 },
 		 highLight: [],
-		 desaturate: [9]		
+		 desaturate: [9]			
      }
 ];
 

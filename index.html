@@ -45,7 +45,7 @@
 		<div class="tableItem">
 			<div style="text-align: left;"> {{item.name}} <br>
 				{{item.subname}} </div>
-			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span> <img ng-src="{{item.image}}" class="desaturate" ng-class="{'desaturate' : desaturate(item)}" /> </div>
+			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span>  <img ng-src="{{item.image}}" class="desaturate" ng-class="{'desaturate' : !desaturate(item)}" /> </div>
 			<div>
 				<div class="text-blue">Non-Integated</div>
 				<div class="progressbar">
