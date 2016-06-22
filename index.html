@@ -3,6 +3,7 @@
 <head>
 <title>FMC Dashboard</title>
 <meta charset="utf-8">
+<meta content="IE=9" http-equiv="X-UA-Compatible">
 <link href="app.css" type="text/css" rel="stylesheet">
 </head>
 <body ng-app="FMCDashboard">
@@ -19,7 +20,10 @@
 		<div class="tableItem">
 			<div style="text-align: left;"> {{item.name}} <br>
 				{{item.subname}} </div>
-			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span> <img ng-src="{{item.image}}" class="desaturate" ng-class="{'desaturate' : !desaturate(item)}" /> </div>
+			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span> 
+			<img ng-if="desaturate(item)" ng-src="{{item.image}}" /> 
+			<img ng-if="!desaturate(item)" ng-src="{{item.imageGrey}}" />
+			</div>
 			<div>
 				<div class="text-blue">Non-Integated</div>
 				<div class="progressbar">
@@ -45,7 +49,10 @@
 		<div class="tableItem">
 			<div style="text-align: left;"> {{item.name}} <br>
 				{{item.subname}} </div>
-			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span>  <img ng-src="{{item.image}}" class="desaturate" ng-class="{'desaturate' : !desaturate(item)}" /> </div>
+			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span>  
+				<img ng-if="desaturate(item)" ng-src="{{item.image}}" /> 
+				<img ng-if="!desaturate(item)" ng-src="{{item.imageGrey}}" />
+			</div>
 			<div>
 				<div class="text-blue">Non-Integated</div>
 				<div class="progressbar">
