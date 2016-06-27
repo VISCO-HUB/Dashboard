@@ -141,8 +141,13 @@ html {
 	overflow: hidden;
 		
 	/* STUPID IE */
-	margin-left: 50%;
+	margin-left: 39%;
 	transform: translate(-50%, 0px);
+	transition: all 2.25s ease-in-out;
+}
+
+.cart-slide-right {
+	margin-left: 50% !important;
 }
 
 .cart-slide-left {

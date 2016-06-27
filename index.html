@@ -60,7 +60,7 @@
 		</div>
 	</div>
 </div>
-<div id="cart">
+<div id="cart" ng-class="{'cart-slide-right': currentState == maxState}">
 	<div class="total-saving" ng-style="{'width': graphState + '%'}"> <img ng-class="{'cart-slide-left': currentState == maxState}" src="images/Draft03.png" />text-slide-left </div>
 	<div class="total-saving-text" ng-class="{'text-slide-left': currentState == maxState}" ng-style="graphState > 35 ? {'opacity': '1.0', 'left': graphState + 2 + '%'} : {'opacity': '0', 'left': graphState + 2 + '%'}">${{counterSaving}}M<br>
 		Total Saving</div>
