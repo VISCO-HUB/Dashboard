@@ -111,7 +111,7 @@ html {
 	content: '';
 	display: block;
 	height: 12px;
-	transition: width 1s ease-in-out;
+	transition: width 2.25s ease-in-out;
 }
 .progressbar .percent-blue {
 	background: url("./images/percent_blue.png");
@@ -147,13 +147,13 @@ html {
 
 .cart-slide-left {
 	margin-left: -23%;
-	transition: all 1s ease-in-out;
+	transition: all 2.25s ease-in-out;
 }
 
 .text-slide-left {
 	margin-left: -25%;
 	margin-top: 5%;
-	transition: all 1s ease-in-out;
+	transition: all 2.25s ease-in-out;
 }
 
 #cart img {
@@ -166,7 +166,7 @@ html {
 	height: 100%;
 	width: 0%;
 	display: block;
-	transition: all 1s ease-in-out;
+	transition: all 2.25s ease-in-out;
 	overflow: hidden;
 }
 #cart .total-saving-text {
@@ -178,7 +178,7 @@ html {
 	position: absolute;
 	top: 20%;
 	opacity: 0;
-	transition: all 1.5s ease-in-out;
+	transition: all 2.25s ease-in-out;
 }
 
 @media (max-width: 1230px) {

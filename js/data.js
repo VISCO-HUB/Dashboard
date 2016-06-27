@@ -1,20 +1,20 @@
 ﻿var table1 = [
 
      {
-         name: "Tree system",
+         name: "Tree systems",
          image: "images/image1.png",
 		 imageGrey: "images/grey-image1.png",
-         nonIntegrated: { 1: 91, 2: 91, 3: 91, 4: 91, 5: 91, 6: 91, 7: 91, 8: 91, 9: 91, 10: 91 },
-         integrated: { 1: 0, 2: 50, 3: 50, 4: 50, 5: 50, 6: 50, 7: 60, 8: 60, 9: 60, 10: 60 }	,
+         nonIntegrated: { 1: 97.55, 2: 97.55, 3: 97.55, 4: 97.55, 5: 97.55, 6:97.55, 7: 97.55, 8:97.55, 9: 97.55, 10: 97.55 },
+         integrated: { 1: 0, 2: 24.39, 3: 24.39, 4: 24.39, 5: 24.39, 6: 24.39, 7: 24.39, 8: 24.39, 9: 24.39, 10: 24.39 }	,
 		 highLight: [],
 		 desaturate: [2, 3, 4, 5, 6, 7, 8, 9, 10]		 
      },
      {
-         name: "Manifold / Plet",
+         name: "Manifolds",
          image: "images/image2.png",
  		 imageGrey: "images/grey-image2.png",
-         nonIntegrated: { 1: 30, 2: 30, 3: 30, 4: 30, 5: 30, 6: 30, 7: 30, 8: 30, 9: 30, 10: 30 },
-         integrated: { 1: 0, 2: 0, 3: 35, 4: 45, 5: 45, 6: 45, 7: 45, 8: 45, 9: 55, 10: 55 },
+         nonIntegrated: { 1: 32.53, 2: 32.53, 3: 32.53, 4: 32.53, 5: 32.53, 6: 32.53, 7: 32.53, 8: 32.53, 9: 32.53, 10: 32.53 },
+         integrated: { 1: 0, 2: 0, 3: 8.69, 4: 8.69, 5: 8.69, 6: 8.69, 7: 8.69, 8: 8.69, 9: 8.69, 10: 8.69 },
          highLight: [],	
 		 desaturate: [3, 4, 5, 6, 7, 8, 9, 10]	
      },	
@@ -22,7 +22,7 @@
          name: "Controls",
          image: "images/image3.png",
 		 imageGrey: "images/grey-image3.png",
-         nonIntegrated: {1: 34, 2: 34, 3: 34, 4: 34, 5: 34, 6: 34, 7: 34, 8: 34, 9: 34, 10: 34},
+         nonIntegrated: {1: 30.69, 2: 30.69, 3: 30.69, 4: 30.69, 5: 30.69, 6: 30.69, 7: 30.69, 8: 30.69, 9: 30.69, 10: 30.69},
          integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 },
 		 highLight: [],
 		 desaturate: [4, 5, 6, 7, 8, 9, 10]
@@ -31,8 +31,8 @@
          name: "TIE-IN SYSTEMS",
          image: "images/image0.png",
 		  imageGrey: "images/grey-image0.png",
-         nonIntegrated: {1: 80, 2: 80, 3: 80, 4: 80, 5: 80, 6: 80, 7: 80, 8: 80, 9: 80, 10: 80},
-         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 80, 6: 80, 7: 80, 8: 80, 9: 80, 10: 80 },
+         nonIntegrated: {1: 23.78, 2: 23.78, 3: 23.78, 4: 23.78, 5: 23.78, 6: 23.78, 7: 23.78, 8: 23.78, 9: 23.78, 10: 23.78},
+         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 24.16, 6: 24.16, 7: 24.16, 8: 24.16, 9: 24.16, 10: 24.16 },
 		 highLight: [],
 		 desaturate: [5, 6, 7, 8, 9, 10]
      }
@@ -41,41 +41,41 @@
 var table2 = [
  {
          name: "Flowlines",
-		 subname: "(deep blue)",
+		 
          image: "images/image4.png",
 		 imageGrey: "images/grey-image4.png",
-         nonIntegrated: { 1: 83, 2: 83, 3: 83, 4: 83, 5: 83, 6: 83, 7: 83, 8: 83, 9: 83, 10: 83 },
-         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 28, 7: 38, 8: 38, 9: 38, 10: 38 },
+         nonIntegrated: { 1: 97.84, 2: 97.84, 3: 97.84, 4: 97.84, 5: 97.84, 6: 97.84, 7: 97.84, 8: 97.84, 9: 97.84, 10: 97.84 },
+         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 83.3, 7: 83.3, 8: 83.3, 9: 83.3, 10: 83.3 },
 		 highLight: [],
 		 desaturate: [6, 7, 8, 9, 10]		
      },
 	  {
          name: "Heavy Lift",
-		 subname: "(Global 1200)",
+		 
          image: "images/image4.png",
 		 imageGrey: "images/grey-image4.png",
-         nonIntegrated: {1: 79, 2: 79, 3: 79, 4: 79, 5: 79, 6: 79, 7: 79, 8: 79, 9: 79, 10: 79},
-         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 43, 8: 43, 9: 43, 10: 43 },
+         nonIntegrated: {1: 5, 2: 5, 3: 5, 4: 5, 5: 5, 6: 5, 7: 5, 8: 5, 9: 5, 10: 5},
+         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 },
 		 highLight: [],
 		 desaturate: [7, 8, 9, 10]	
      },
 	  {
          name: "Construction",
-		 subname: "(normand pioneer)",
+		 
          image: "images/image6.png",
      	 imageGrey: "images/grey-image6.png",
-         nonIntegrated: {1: 86, 2: 86, 3: 86, 4: 86, 5: 86, 6: 86, 7: 86, 8: 86, 9: 86, 10: 86},
-         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 45, 9: 45, 10: 45 },
+         nonIntegrated: {1: 19.44, 2: 19.44, 3: 19.44, 4: 19.44, 5: 19.44, 6: 19.44, 7: 19.44, 8: 19.44, 9: 19.44, 10: 19.44},
+         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 9.28, 9: 9.28, 10: 9.28 },
      	 highLight: [],
 		 desaturate: [8, 9, 10]	
      },
 	 {
          name: "Umbilical",
-		 subname: "(deep energy)",
+		 
          image: "images/image4.png",
 		 imageGrey: "images/grey-image4.png",
-         nonIntegrated: {1: 58, 2: 58, 3: 58, 4: 58, 5: 58, 6: 58, 7: 58, 8: 58, 9: 58, 10: 58},
-         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 35, 10: 35 },
+         nonIntegrated: {1: 51.86, 2: 51.86, 3: 51.86, 4: 51.86, 5: 51.86, 6: 51.86, 7: 51.86, 8: 51.86, 9: 51.86, 10: 51.86},
+         integrated: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 },
 		 highLight: [],
 		 desaturate: [9, 10]			
      }
@@ -83,16 +83,18 @@ var table2 = [
 
 var chart = {
 	totalSaving: {
-		1: 30,
-		2: 60,
-		3: 90,
-		4: 120,		
-		5: 150,
-		6: 180,
-		7: 210,
-		8: 240,
-		9: 270,	
-		10: 300
+
+		1:0,
+		2: 36.5,
+		3: 48.4,
+		4: 63.9,
+		5: 63.7,		
+		6: 71,
+		7: 73.5,
+		8: 78.6,
+		9: 104.5,	
+		10: 104.5	
+		
 	},
 	
 	graphPercent: {

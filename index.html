@@ -4,7 +4,7 @@
 <title>FMC Dashboard</title>
 <meta charset="utf-8">
 
-<link href="app.css" type="text/css" rel="stylesheet">
+<link href="app.css" type="text/css" rel="stylesheet"> 
 </head>
 <body ng-app="FMCDashboard">
 <div id="table">
@@ -22,7 +22,7 @@
 				{{item.subname}} </div>
 			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span> <img ng-if="desaturate(item)" ng-src="{{item.image}}" /> <img ng-if="!desaturate(item)" ng-src="{{item.imageGrey}}" /> </div>
 			<div>
-				<div class="text-blue">Non-Integated</div>
+				<div class="text-blue">Non-Integrated</div>
 				<div class="progressbar">
 					<div class="percent-blue" ng-style="{'width': item.nonIntegrated[currentState] + '%'}"></div>
 				</div>
@@ -48,7 +48,7 @@
 				{{item.subname}} </div>
 			<div style="text-align: center;"><span class="glow" ng-class="{'show-glow' : glow(item)}"></span> <img ng-if="desaturate(item)" ng-src="{{item.image}}" /> <img ng-if="!desaturate(item)" ng-src="{{item.imageGrey}}" /> </div>
 			<div>
-				<div class="text-blue">Non-Integated</div>
+				<div class="text-blue">Non-Integrated</div>
 				<div class="progressbar">
 					<div class="percent-blue" ng-style="{'width': item.nonIntegrated[currentState] + '%'}"></div>
 				</div>
@@ -62,13 +62,13 @@
 </div>
 <div id="cart">
 	<div class="total-saving" ng-style="{'width': graphState + '%'}"> <img ng-class="{'cart-slide-left': currentState == maxState}" src="images/graphTotalSaving.png" /> </div>
-	<div class="total-saving-text" ng-class="{'text-slide-left': currentState == maxState}" ng-style="graphState > 20 ? {'opacity': '1.0', 'left': graphState + 2 + '%'} : {'opacity': '0', 'left': graphState + 2 + '%'}">${{counterSaving}}M<br>
+	<div class="total-saving-text" ng-class="{'text-slide-left': currentState == maxState}" ng-style="graphState > 15 ? {'opacity': '1.0', 'left': graphState + 2 + '%'} : {'opacity': '0', 'left': graphState + 2 + '%'}">${{counterSaving}}M<br>
 		Total Saving</div>
 	<img src="images/graphBg.png" /> 
 </div>
 	
 <script src="js/angular.js"></script>
 <script src="js/data.js"></script>
-<script src="js/app.js"></script>
+<script src="js/app.js"> </script>
 </body>
-</html>
+</html> 

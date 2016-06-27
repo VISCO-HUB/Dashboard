@@ -29,24 +29,35 @@ angular.module('FMCDashboard', []).
 				setGraphState();
 				
 				var s1 = $scope.chart.totalSaving[$scope.currentState];
-				var s2 = $scope.chart.totalSaving[$scope.currentState - 1];
-								
+				var s2 = $scope.chart.totalSaving[$scope.currentState-1];
+				if($scope.currentState < $scope.prevState)
+					s2 = $scope.chart.totalSaving[$scope.currentState+1];
+
+				var timeoutInterval = Math.abs(225 / (s2-s1));
+				timeoutInterval.toFixed(0);
+				
 				function startCount() {
-					if(!animateCounter || !s2) {return false}
+					//if(!animateCounter || !s2) {return false}
+					if(!s2) {s2 = 0}
+					if(!animateCounter) {return false}
 						
 						$timeout (function(){ 
 	
-							s2++;
-							
-							$scope.counterSaving = s2
-									
-							if(s2 < s1) {startCount()}
 						
-						}, 30);
+							if(s1 < s2)
+								s2 -= 0.1;
+							else 
+								s2+= 0.1;
+							//console.debug(s2)
+							$scope.counterSaving = s2.toFixed(1)
+									
+							if(s2 + 0.05 < s1 || s2 > s1 + 0.05) {startCount()}
+						
+						}, timeoutInterval);
 				}
 					
 				startCount();	
-				
+				$scope.prevState = $scope.currentState;
                 $scope.$apply();
             };
               
@@ -59,6 +70,7 @@ angular.module('FMCDashboard', []).
 			}, 200);
 			   
             $scope.currentState = 0;
+			$scope.prevState = -1;
             $scope.maxState = 10;
 			$scope.minState = 1;
             $scope.table1 = table1;
