@@ -8,8 +8,8 @@ angular.module('FMCDashboard', []).
 			function setGraphState() {
 				
 				var p = $scope.chart.graphPercent[$scope.currentState];
-				var minState = 12.2;
-				var maxState = 76.5
+				var minState = 31.2;
+				var maxState = 79.5
 				var p100 = maxState - minState ;
 
 				$scope.graphState = ((p / 100.0) * p100) + minState;

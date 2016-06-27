@@ -134,7 +134,7 @@ html {
 
 #cart {
 	display: block;
-	width: 70vw;
+	width: 95vw;
 	/*transform: translate(calc(50vw - 50%), 80px);*/
 	clear: both;
 	position: relative;
@@ -142,25 +142,44 @@ html {
 		
 	/* STUPID IE */
 	margin-left: 50%;
-	transform: translate(-50%, 80px);
+	transform: translate(-50%, 0px);
 }
 
 .cart-slide-left {
-	margin-left: -23%;
+	margin-left: -28%;
 	transition: all 2.25s ease-in-out;
 }
 
 .text-slide-left {
-	margin-left: -25%;
-	margin-top: 5%;
-	transition: all 2.25s ease-in-out;
+	margin-left: -23%;
+	margin-top: 1.5%;
+	transition: all 2.8s ease-in-out;
 }
 
 #cart img {
-	width: 70vw;
+	width: 95vw;
 	bottom: 0;
 	left: 0;
+	transition: all 1s linear;
 }
+
+.full-graph {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;	
+	transition: all 1s linear;
+}
+
+.show-graph {
+	opacity: 1;	
+}
+
+.hide-graph {
+	opacity: 0;	
+}
+
+
 #cart .total-saving {
 	position: absolute;
 	height: 100%;
@@ -176,7 +195,8 @@ html {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	width: 200px;
 	position: absolute;
-	top: 20%;
+	top: 46%;
+	left: 20%;
 	opacity: 0;
 	transition: all 2.25s ease-in-out;
 }

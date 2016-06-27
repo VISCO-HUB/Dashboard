@@ -61,10 +61,11 @@
 	</div>
 </div>
 <div id="cart">
-	<div class="total-saving" ng-style="{'width': graphState + '%'}"> <img ng-class="{'cart-slide-left': currentState == maxState}" src="images/graphTotalSaving.png" /> </div>
-	<div class="total-saving-text" ng-class="{'text-slide-left': currentState == maxState}" ng-style="graphState > 15 ? {'opacity': '1.0', 'left': graphState + 2 + '%'} : {'opacity': '0', 'left': graphState + 2 + '%'}">${{counterSaving}}M<br>
+	<div class="total-saving" ng-style="{'width': graphState + '%'}"> <img ng-class="{'cart-slide-left': currentState == maxState}" src="images/Draft03.png" />text-slide-left </div>
+	<div class="total-saving-text" ng-class="{'text-slide-left': currentState == maxState}" ng-style="graphState > 35 ? {'opacity': '1.0', 'left': graphState + 2 + '%'} : {'opacity': '0', 'left': graphState + 2 + '%'}">${{counterSaving}}M<br>
 		Total Saving</div>
-	<img src="images/graphBg.png" /> 
+	<img src="images/Draft01.png" ng-class="{'hide-graph': currentState == maxState}"/> 
+	<img src="images/Draft02.png" class="full-graph" ng-class="{'show-graph': currentState == maxState}"/> 
 </div>
 	
 <script src="js/angular.js"></script>
