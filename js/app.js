@@ -23,8 +23,8 @@ angular.module('FMCDashboard', []).
                 if ((e.keyCode == 39 || e.keyCode == 34) && $scope.currentState < $scope.maxState) { $scope.currentState++; animateCounter = true; }
                 if ((e.keyCode == 37 || e.keyCode == 33) && $scope.currentState > $scope.minState) { $scope.currentState--; animateCounter = true; }
 
-				if(e.keyCode == 35 && $scope.currentState != $scope.maxState) {$scope.currentState = $scope.maxState; animateCounter = true; }
-				if(e.keyCode == 36 && $scope.currentState != $scope.minState) {$scope.currentState = $scope.minState; animateCounter = true;  }
+				if(e.keyCode == 35 && $scope.currentState <= $scope.maxState) {$scope.currentState = $scope.maxState; animateCounter = true; }
+				if(e.keyCode == 36 && $scope.currentState >= $scope.minState) {$scope.currentState = $scope.minState; animateCounter = true;  }
 
 				setGraphState();
 				
@@ -40,11 +40,10 @@ angular.module('FMCDashboard', []).
 					p2 = $scope.chart.totalSavingPercent[$scope.currentState+1]
 				}
 
-				var timeoutInterval = Math.abs(225 / (s2-s1))
+				
 				var countBy = Math.abs((s2-s1) / 200)
 				var countByPercent = Math.abs((p2-p1) / 200)
-				
-				timeoutInterval.toFixed(0);
+					
 				
 				function startCount() {
 					//if(!animateCounter || !s2) {return false}
