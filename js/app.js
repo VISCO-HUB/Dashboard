@@ -28,12 +28,22 @@ angular.module('FMCDashboard', []).
 
 				setGraphState();
 				
-				var s1 = $scope.chart.totalSaving[$scope.currentState];
-				var s2 = $scope.chart.totalSaving[$scope.currentState-1];
+				var s1 = $scope.chart.totalSaving[$scope.currentState]
+				var s2 = $scope.chart.totalSaving[$scope.currentState-1]
+				
+				var p1 = $scope.chart.totalSavingPercent[$scope.currentState]
+				var p2 = $scope.chart.totalSavingPercent[$scope.currentState-1]
+				
 				if($scope.currentState < $scope.prevState)
-					s2 = $scope.chart.totalSaving[$scope.currentState+1];
+				{
+					s2 = $scope.chart.totalSaving[$scope.currentState+1]
+					p2 = $scope.chart.totalSavingPercent[$scope.currentState+1]
+				}
 
-				var timeoutInterval = Math.abs(225 / (s2-s1));
+				var timeoutInterval = Math.abs(225 / (s2-s1))
+				var countBy = Math.abs((s2-s1) / 200)
+				var countByPercent = Math.abs((p2-p1) / 200)
+				
 				timeoutInterval.toFixed(0);
 				
 				function startCount() {
@@ -45,19 +55,27 @@ angular.module('FMCDashboard', []).
 	
 						
 							if(s1 < s2)
-								s2 -= 0.1;
+							{
+								s2 -= countBy
+								p2 -= countByPercent
+							}
 							else 
-								s2+= 0.1;
+							{
+								s2 += countBy
+								p2 += countByPercent
+							}
+
 							//console.debug(s2)
 							$scope.counterSaving = s2.toFixed(1)
+							$scope.counterSavingPercnet = p2.toFixed(1)
 									
 							if(s2 + 0.05 < s1 || s2 > s1 + 0.05) {startCount()}
 						
-						}, timeoutInterval);
+						}, 10);
 				}
 					
-				startCount();	
-				$scope.prevState = $scope.currentState;
+				startCount()
+				$scope.prevState = $scope.currentState
                 $scope.$apply();
             };
               
@@ -65,9 +83,9 @@ angular.module('FMCDashboard', []).
 			  
 			$timeout (function(){ 
 				$scope.currentState = 1
-				setGraphState();
+				setGraphState()
 				
-			}, 200);
+			}, 200)
 			   
             $scope.currentState = 0;
 			$scope.prevState = -1;
@@ -78,6 +96,7 @@ angular.module('FMCDashboard', []).
 			$scope.chart = chart;
 			$scope.graphState = 0;
 			$scope.counterSaving = 0;
+			$scope.counterSavingPercnet = 0;
 			
 			$scope.glow = function (itm) {
 				if(!itm.highLight) {return false;}

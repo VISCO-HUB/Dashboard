@@ -1,4 +1,4 @@
-html_old {
+html {
 	height: 100%;
 	width: 100%;
 	background: -moz-linear-gradient(270deg, #133A53 0%, #051D2A 100%); /* ff3.6+ */
@@ -15,7 +15,7 @@ html_old {
 	overflow-x: hidden;	
 }
 
-html {
+html_old {
 	height: 100%;
 	width: 100%;
 	margin: 0;
@@ -68,7 +68,7 @@ html {
 }
 
 .header span {
-	font-size: 19px;
+	font-size: 21px;
 }
 
 .tableItem {
@@ -84,7 +84,7 @@ html {
 	position: relative;
 	color: #0479B9;
 	text-transform: uppercase;
-	font-size: 15px;
+	font-size: 18px;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	align-self: center;
 	border: 0;
@@ -228,7 +228,7 @@ html {
 	}
 	
 	#cart .total-saving-text {
-		font-size: 12px;	
+		font-size: 15px;	
 	}
 	
 	.header {
