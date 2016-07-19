@@ -19,10 +19,11 @@ angular.module('FMCDashboard', []).
 				
 				console.log(e.keyCode)
 				var animateCounter = false
-				
+				// Left / Right				
                 if ((e.keyCode == 39 || e.keyCode == 34) && $scope.currentState < $scope.maxState) { $scope.currentState++; animateCounter = true; }
                 if ((e.keyCode == 37 || e.keyCode == 33) && $scope.currentState > $scope.minState) { $scope.currentState--; animateCounter = true; }
 
+				// Home / End
 				if(e.keyCode == 35 && $scope.currentState <= $scope.maxState) {$scope.currentState = $scope.maxState; animateCounter = true; }
 				if(e.keyCode == 36 && $scope.currentState >= $scope.minState) {$scope.currentState = $scope.minState; animateCounter = true;  }
 
@@ -34,15 +35,19 @@ angular.module('FMCDashboard', []).
 				var p1 = $scope.chart.totalSavingPercent[$scope.currentState]
 				var p2 = $scope.chart.totalSavingPercent[$scope.currentState-1]
 				
+				var countByPercent = (p1 - p2) / 200
+				
 				if($scope.currentState < $scope.prevState)
 				{
 					s2 = $scope.chart.totalSaving[$scope.currentState+1]
 					p2 = $scope.chart.totalSavingPercent[$scope.currentState+1]
+					
+					countByPercent = (p2 - p1) / 200
 				}
 
 				
 				var countBy = Math.abs((s2-s1) / 200)
-				var countByPercent = Math.abs((p2-p1) / 200)
+//				var countByPercent = (p1 - p2) / 200
 					
 				
 				function startCount() {
@@ -66,7 +71,7 @@ angular.module('FMCDashboard', []).
 
 							//console.debug(s2)
 							$scope.counterSaving = s2.toFixed(1)
-							$scope.counterSavingPercnet = p2.toFixed(1)
+							$scope.counterSavingPercnet = p2.toFixed(0)
 									
 							if(s2 + 0.05 < s1 || s2 > s1 + 0.05) {startCount()}
 						
