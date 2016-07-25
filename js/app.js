@@ -4,9 +4,8 @@ angular.module('FMCDashboard', []).
 
     run(['$rootScope', '$timeout',
         function ($scope, $timeout) {
-
-		
-		    $scope.cssTheme = 'dark';
+	
+			$scope.cssTheme = 'dark'
 		
 			function setGraphState() {
 				
@@ -18,23 +17,27 @@ angular.module('FMCDashboard', []).
 				$scope.graphState = ((p / 100.0) * p100) + minState;
 			}
 
+			
             window.onkeydown = function (e) {
 				
-				if (e.keyCode == 84) { 					
+				var animateCounter = false
+				
+				// Change themes /  Down / Up			
+				if (e.keyCode == 40 || e.keyCode == 38) { 					
 					$scope.cssTheme = $scope.cssTheme === 'dark' ? 'light' : 'dark'; 	
 					$scope.$apply();					
 					return;
 				}
 			
-				
-				var animateCounter = false
+				console.log(e.keyCode)
+								
 				// Left / Right				
                 if ((e.keyCode == 39 || e.keyCode == 34) && $scope.currentState < $scope.maxState) { $scope.currentState++; animateCounter = true; }
                 if ((e.keyCode == 37 || e.keyCode == 33) && $scope.currentState > $scope.minState) { $scope.currentState--; animateCounter = true; }
 
 				// Home / End
-				if(e.keyCode == 35 && $scope.currentState <= $scope.maxState) {$scope.currentState = $scope.maxState; animateCounter = true; }
-				if(e.keyCode == 36 && $scope.currentState >= $scope.minState) {$scope.currentState = $scope.minState; animateCounter = true;  }
+				if(e.keyCode == 35 && $scope.currentState < $scope.maxState) {$scope.currentState = $scope.maxState; animateCounter = true; }
+				if(e.keyCode == 36 && $scope.currentState > $scope.minState) {$scope.currentState = $scope.minState; animateCounter = true;  }
 
 				setGraphState();
 				
@@ -45,6 +48,7 @@ angular.module('FMCDashboard', []).
 				var p2 = $scope.chart.totalSavingPercent[$scope.currentState-1]
 				
 				var countByPercent = (p1 - p2) / 200
+				var countBy = (s1 - s2) / 200
 				
 				if($scope.currentState < $scope.prevState)
 				{
@@ -52,39 +56,44 @@ angular.module('FMCDashboard', []).
 					p2 = $scope.chart.totalSavingPercent[$scope.currentState+1]
 					
 					countByPercent = (p2 - p1) / 200
+					countBy = (s2 - s1) / 200
 				}
 				
-				var countBy = Math.abs((s2-s1) / 200)
+											
+				$scope.$apply();
 									
 				function startCount() {
 
+					$timeout.cancel($scope.tmr)
+					 
 					if(!s2) {s2 = 0}
-					if(!animateCounter) {return false}
-						
-						$timeout (function(){ 
-	
-						
+					if(!animateCounter) return false
+											
+						$scope.tmr = $timeout (function(){ 
+							
 							if(s1 < s2)
 							{
 								s2 -= countBy
 								p2 -= countByPercent
 							}
-							else 
+							
+							if(s1 > s2)
 							{
 								s2 += countBy
 								p2 += countByPercent
 							}
-
-							//console.debug(s2)
+														
 							$scope.counterSaving = s2.toFixed(1)
 							$scope.counterSavingPercnet = p2.toFixed(0)
 									
 							if(s2 + 0.05 < s1 || s2 > s1 + 0.05) {startCount()}
-						
+					
+
+			                $scope.$apply();
 						}, 10);
 				}
 					
-				startCount()
+				if($scope.currentState != $scope.minState) startCount()
 				$scope.prevState = $scope.currentState
                 $scope.$apply();
             };
@@ -108,6 +117,9 @@ angular.module('FMCDashboard', []).
 			$scope.counterSaving = 0;
 			$scope.counterSavingPercnet = 0;
 			
+			// Themes
+			$scope.cssTheme = 'dark';
+						
 			$scope.glow = function (itm) {
 				if(!itm.highLight) {return false;}
 				return itm.highLight.indexOf($scope.currentState) != -1;

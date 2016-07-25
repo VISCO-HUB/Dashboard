@@ -38,7 +38,7 @@
 	<div class="header">
 		<div class="tableItem">
 			<div> </div>
-			<div><img src="images/logo2.png" style="margin-top: 11px;"/> </div>
+			<div><img ng-src="images/logo2_{{cssTheme}}.png" style="margin-top: 11px;"/> </div>
 			<div> <span>SURF CAPEX</span> </div>
 		</div>
 	</div>
@@ -61,11 +61,11 @@
 	</div>
 </div>
 <div id="cart" ng-class="{'cart-slide-right': currentState == maxState}">
-	<div class="total-saving" ng-style="{'width': graphState + '%'}"> <img ng-class="{'cart-slide-left': currentState == maxState}" src="images/Draft03.png" /></div>
+	<div class="total-saving" ng-style="{'width': graphState + '%'}"> <img ng-class="{'cart-slide-left': currentState == maxState}" ng-src="images/Draft03_{{cssTheme}}.png" /></div>
 	<div class="total-saving-text" ng-class="{'text-slide-left': currentState == maxState}" ng-style="graphState > 33 ? {'opacity': '1.0', 'left': graphState + 2 + '%'} : {'opacity': '0', 'left': graphState + 2 + '%'}">${{counterSaving}}M ({{counterSavingPercnet}}%)<br>
 		Total Saving</div>
-	<img src="images/Draft01.png" ng-class="{'hide-graph': currentState == maxState}"/> 
-	<img src="images/Draft02.png" class="full-graph" ng-class="{'show-graph': currentState == maxState}"/> 
+	<img ng-src="images/Draft01_{{cssTheme}}.png" ng-class="{'hide-graph': currentState == maxState}"/> 
+	<img ng-src="images/Draft02_{{cssTheme}}.png" class="full-graph" ng-class="{'show-graph': currentState == maxState}"/> 
 </div>
 	
 <script src="js/angular.js"></script>

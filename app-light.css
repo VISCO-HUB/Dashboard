@@ -9,14 +9,6 @@ html {
 	overflow: hidden;	
 }
 
-html_old {
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;	
-	background: #E9EDEC;
-}
 
 .glow {
 	position: absolute;
@@ -52,7 +44,7 @@ html_old {
 .header {
 	padding: 0;
 	margin: 0;	
-	color: #0479B9;
+	color: #4185A6;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -66,7 +58,7 @@ html_old {
 }
 
 .tableItem {
-	border-bottom: 1px solid #0C4864;
+	border-bottom: 1px solid #CCD7D3;
 	padding: 10px 0;
 	height: 131px;
 	max-height: 131px;
@@ -76,7 +68,7 @@ html_old {
 
 .tableItem > div {
 	position: relative;
-	color: rgb(0, 165, 255);
+	color: #717171;
 	text-transform: uppercase;
 	font-size: 18px;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -104,8 +96,9 @@ html_old {
 	width: 100%;
 	height: 12px;
 	display: block !important;
-	box-shadow: 0 0 15px rgba(0,0,0,0.1);
-	background: rgba(0,0,0,0.3);
+/*	box-shadow: 0 0 15px rgba(0,0,0,0.1);*/
+	background: #FFF;
+	border: 1px solid #F6F8F8;
 	margin: 15px 0;
 }
 .progressbar > div {
@@ -117,21 +110,21 @@ html_old {
 	transition: width 2.25s ease-in-out;
 }
 .progressbar .percent-blue {
-	background: url("./images/percent_blue.png");
+	background: url("./images/percent_blue_light.png");
 	background-color: #A6EBFE;
-	box-shadow: 0 0 50px rgba(182,228,255,0.6);
+	/*box-shadow: 0 0 50px rgba(182,228,255,0.6);*/
 }
 .progressbar .percent-green {
-	background: url("./images/percent_green.png");
-	background-color: #97FF44;
-	box-shadow: 0 0 50px rgba(151,255,68,0.6);
+	background: url("./images/percent_green_light.png");
+	background-color: #99C33D;
+	/*box-shadow: 0 0 50px rgba(151,255,68,0.6);*/
 }
 .text-blue {
-	color: rgb(0, 165, 255);
+	color: #4185A6;
 	text-align: center;
 }
 .text-green {
-	color: #7BE000;
+	color: #7AA235;
 	text-align: center;
 }
 
@@ -198,7 +191,7 @@ html_old {
 }
 #cart .total-saving-text {
 	text-transform: uppercase;
-	color: #7bd131;
+	color: #7AA235;
 	font-size: 18px;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	width: 200px;

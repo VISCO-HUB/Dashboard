@@ -84,7 +84,7 @@ var table2 = [
 var chart = {
 	totalSaving: {
 
-		1:0,
+		1: 0.0,
 		2: 20.17,
 		3: 25.5,
 		4: 41.56,

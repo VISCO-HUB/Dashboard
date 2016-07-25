@@ -123,12 +123,12 @@ html_old {
 	transition: width 2.25s ease-in-out;
 }
 .progressbar .percent-blue {
-	background: url("./images/percent_blue.png");
+	background: url("./images/percent_blue_dark.png");
 	background-color: #A6EBFE;
 	box-shadow: 0 0 50px rgba(182,228,255,0.6);
 }
 .progressbar .percent-green {
-	background: url("./images/percent_green.png");
+	background: url("./images/percent_green_dark.png");
 	background-color: #97FF44;
 	box-shadow: 0 0 50px rgba(151,255,68,0.6);
 }
