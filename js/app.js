@@ -5,6 +5,9 @@ angular.module('FMCDashboard', []).
     run(['$rootScope', '$timeout',
         function ($scope, $timeout) {
 
+		
+		    $scope.cssTheme = 'dark';
+		
 			function setGraphState() {
 				
 				var p = $scope.chart.graphPercent[$scope.currentState];
@@ -17,7 +20,13 @@ angular.module('FMCDashboard', []).
 
             window.onkeydown = function (e) {
 				
-				console.log(e.keyCode)
+				if (e.keyCode == 84) { 					
+					$scope.cssTheme = $scope.cssTheme === 'dark' ? 'light' : 'dark'; 	
+					$scope.$apply();					
+					return;
+				}
+			
+				
 				var animateCounter = false
 				// Left / Right				
                 if ((e.keyCode == 39 || e.keyCode == 34) && $scope.currentState < $scope.maxState) { $scope.currentState++; animateCounter = true; }
@@ -44,14 +53,11 @@ angular.module('FMCDashboard', []).
 					
 					countByPercent = (p2 - p1) / 200
 				}
-
 				
 				var countBy = Math.abs((s2-s1) / 200)
-//				var countByPercent = (p1 - p2) / 200
-					
-				
+									
 				function startCount() {
-					//if(!animateCounter || !s2) {return false}
+
 					if(!s2) {s2 = 0}
 					if(!animateCounter) {return false}
 						

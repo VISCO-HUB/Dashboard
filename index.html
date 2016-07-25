@@ -1,12 +1,12 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="en" ng-app="FMCDashboard">
 <head>
 <title>FMC Dashboard</title>
 <meta charset="utf-8">
 
-<link href="app.css" type="text/css" rel="stylesheet"> 
+<link ng-href="app-{{cssTheme}}.css" type="text/css" rel="stylesheet"> 
 </head>
-<body ng-app="FMCDashboard">
+<body>
 <div id="table">
 <div class="col">
 	<div class="header">
@@ -62,7 +62,7 @@
 </div>
 <div id="cart" ng-class="{'cart-slide-right': currentState == maxState}">
 	<div class="total-saving" ng-style="{'width': graphState + '%'}"> <img ng-class="{'cart-slide-left': currentState == maxState}" src="images/Draft03.png" /></div>
-	<div class="total-saving-text" ng-class="{'text-slide-left': currentState == maxState}" ng-style="graphState > 33 ? {'opacity': '1.0', 'left': graphState + 2 + '%'} : {'opacity': '0', 'left': graphState + 2 + '%'}">${{counterSaving}}M <font size="-1">({{counterSavingPercnet}}%)</font><br>
+	<div class="total-saving-text" ng-class="{'text-slide-left': currentState == maxState}" ng-style="graphState > 33 ? {'opacity': '1.0', 'left': graphState + 2 + '%'} : {'opacity': '0', 'left': graphState + 2 + '%'}">${{counterSaving}}M ({{counterSavingPercnet}}%)<br>
 		Total Saving</div>
 	<img src="images/Draft01.png" ng-class="{'hide-graph': currentState == maxState}"/> 
 	<img src="images/Draft02.png" class="full-graph" ng-class="{'show-graph': currentState == maxState}"/> 
